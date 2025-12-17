@@ -32,9 +32,3 @@ Exception Handling Strategy:
 The VehicleInvalidException is thrown when the vehicle has a null id or size. 
 If the parking spot is unavailable for a vehicle, it returns SpotUnavailableException.
 When the parking lot is full, the ParkingOverflowException is thrown as no more can be accepted.
-
-Instructions to Run the Program:
-
-
-
-  
