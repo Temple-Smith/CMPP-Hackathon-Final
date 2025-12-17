@@ -1,12 +1,12 @@
 public class ParkingSpot {
     private String spotId;
-    private boolean isOccupied;
+    private boolean occupied;
     private String size; // e.g., "compact", "regular", "large"
 
     public ParkingSpot(String spotId, String size) {
         this.spotId = spotId;
         this.size = size;
-        this.isOccupied = false;
+        this.occupied = false;
     }
 
     public String getSpotId() {
@@ -14,14 +14,18 @@ public class ParkingSpot {
     }
 
     public boolean isOccupied() {
-        return isOccupied;
+        return occupied;
     }
 
     public void occupySpot() {
-        isOccupied = true;
+        occupied = true;
     }
 
-    public void vacateSpot() {
-        isOccupied = false;
+    public void releaseSpot() {
+        occupied = false;
+    }
+
+    public String getSize() {
+        return size;
     }
 }
