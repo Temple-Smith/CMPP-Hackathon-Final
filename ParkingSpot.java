@@ -28,4 +28,9 @@ public class ParkingSpot {
     public String getSize() {
         return size;
     }
+
+    public Boolean canFit(Vehicle vehicle) {
+        // Check if the parking spot can fit the vehicle based on size
+        return this.size.equals(vehicle.getSize());
+    }
 }
