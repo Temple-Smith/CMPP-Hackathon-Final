@@ -26,7 +26,7 @@ System Design Overview
   The vehicle class defines the vehicle object, along with getters for the size and license plate.
 
 Description of Parallel Component:
-  Parallelism is handled within the AvailabilityChecker class. This utilizes Java streams to call the findAvailableSpot in parallel.
+  Parallelism is handled within the AvailabilityChecker class. The availability checker manages a list of parking spot objects to find an available     parking spot matching a specific vehicle size using a parallel stream.
   
 Exception Handling Strategy:
 The VehicleInvalidException is thrown when the vehicle has a null id or size. 
