@@ -3,14 +3,14 @@ import java.util.List;
 
 public class ParkingLot {
     private List<ParkingSpot> parkingSpots;
-
+    // Create a ParkingLot with a list of ParkingSpots
     public ParkingLot(List<ParkingSpot> parkingSpots) {
         this.parkingSpots = parkingSpots;
     }
-
+    // Find an available parking spot for a given vehicle
     public ParkingSpot findAvailableSpot(Vehicle vehicle) {
         for (ParkingSpot spot : parkingSpots) {
-            if (!spot.isOccupied() && spot.getSize().equals(vehicle.getSize())) {
+            if (!spot.isOccupied() && spot.canFit(vehicle)) {
                 return spot;
             }
         }
