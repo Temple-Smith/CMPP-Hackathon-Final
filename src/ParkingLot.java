@@ -7,7 +7,15 @@ public class ParkingLot {
     public ParkingLot(List<ParkingSpot> parkingSpots) {
         this.parkingSpots = parkingSpots;
     }
-    
+
+    public List<ParkingSpot> getParkingSpots() {
+        return parkingSpots;
+    }
+
+    public void setParkingSpots(List<ParkingSpot> parkingSpots) {
+        this.parkingSpots = parkingSpots;
+    }
+
     // Find an available parking spot for a given vehicle
     public ParkingSpot findAvailableSpot(Vehicle vehicle) {
         for (ParkingSpot spot : parkingSpots) {
