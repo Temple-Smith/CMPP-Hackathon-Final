@@ -16,7 +16,6 @@ public class ParkingAllocator{
             ParkingSpot parkingSpot = availabilityChecker.findAvailableSpot(v);
             if(parkingSpot == null){
                 throw new ParkingOverflowException("Parking spot not available for this vehicle: "+ v);
-                
             }
             boolean successFullyOccupy = parkingSpot.occupySpot();
             if(!successFullyOccupy){
